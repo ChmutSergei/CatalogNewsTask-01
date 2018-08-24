@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CATALOG>
+    <CATEGORY>
+        <CATEGORY_NAME>Music</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>Pop</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>Michael Jackson the best</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Misteria</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>20.06.2018</DATE_OF_ISSUE>
+                <NEWS_BODY>Album M.Jackson The Best song</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>Metal</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>New album of Rammstein</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Global Records</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>20.05.2018</DATE_OF_ISSUE>
+                <NEWS_BODY>Album Rammstein . !! kkk  l,l ,l,l ,l,l</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+    </CATEGORY>
+    <CATEGORY>
+        <CATEGORY_NAME>Films</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>Action</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>Mission impossible 6</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>20th century Fox</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>20.06.2018</DATE_OF_ISSUE>
+                <NEWS_BODY>New film of series Mission Impossible with Tom Cruz</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>Deadpool 2</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Twentieth Century Fox</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>07.08.2018</DATE_OF_ISSUE>
+                <NEWS_BODY>After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Miami's hottest bartender, while also learning to cope with his lost sense of taste. Searching to regain his spice for life, as well as a flux capacitor, Wade must battle ninjas, the yakuza, and a pack of sexually aggressive canines, as he journeys around the world to discover the importance of family, friendship, and flavor - finding a new taste for adventure and earning the coveted coffee mug title of World's Best Lover.</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+    </CATEGORY>
+    <CATEGORY>
+        <CATEGORY_NAME>Books</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>Classic</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>F.M.Dostoevski</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Publication</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>20.06.2018</DATE_OF_ISSUE>
+                <NEWS_BODY>The best roman of F.M. Dostoevski</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+    </CATEGORY>
+    <CATEGORY>
+        <CATEGORY_NAME>film</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>action</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>Mission Impossible 4</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>SERGE</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>23.10.2010</DATE_OF_ISSUE>
+                <NEWS_BODY>New film of series Mission Impossible with Tom Cruz</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>Mission Impossible 3</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmut</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2006</DATE_OF_ISSUE>
+                <NEWS_BODY>New film on DVD</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+    </CATEGORY>
+</CATALOG>

@@ -8,9 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static by.chmut.catalog.controller.Constant.MAIN;
+import static by.chmut.catalog.constant.Constant.MAIN;
+
+
 
 public class MainCommand implements Command {
+
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
@@ -18,4 +21,5 @@ public class MainCommand implements Command {
 
         requestDispatcher.forward(req,resp);
     }
+
 }

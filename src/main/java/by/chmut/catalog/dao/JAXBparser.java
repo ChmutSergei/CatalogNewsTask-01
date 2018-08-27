@@ -6,7 +6,6 @@ public interface JAXBparser {
 
     Catalog load() throws DAOException;
 
-    void save (Catalog catalog2) throws DAOException;
-
+    void save (Catalog catalog) throws DAOException;
 
 }

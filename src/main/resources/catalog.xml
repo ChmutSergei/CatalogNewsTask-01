@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CATALOG>
+    <CATEGORY>
+        <CATEGORY_NAME>Films</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>action</SUBCATEGORY_NAME>
+            <NEWS_NAME>Mission</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>chmut</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.06.2018</DATE_OF_ISSUE>
+            <NEWS_BODY>new film of Mission Impossible 6</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>action</SUBCATEGORY_NAME>
+            <NEWS_NAME>Rocky</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>chmut</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.06.2010</DATE_OF_ISSUE>
+            <NEWS_BODY>new film of Rocky Balboa</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>other</SUBCATEGORY_NAME>
+            <NEWS_NAME>Drama</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>chmut</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.06.2011</DATE_OF_ISSUE>
+            <NEWS_BODY>new film of Jane Eir</NEWS_BODY>
+        </SUBCATEGORY>
+    </CATEGORY>
+    <CATEGORY>
+        <CATEGORY_NAME>Music</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>other</SUBCATEGORY_NAME>
+            <NEWS_NAME>Jackson</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>chmut</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.06.2011</DATE_OF_ISSUE>
+            <NEWS_BODY>new album of Mike Jack</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>pop</SUBCATEGORY_NAME>
+            <NEWS_NAME>Sia</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>chmut</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.06.2014</DATE_OF_ISSUE>
+            <NEWS_BODY>new album of Sia</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>rock</SUBCATEGORY_NAME>
+            <NEWS_NAME>Marlin</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>chmut</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.06.2012</DATE_OF_ISSUE>
+            <NEWS_BODY>new album of Marlin Manson</NEWS_BODY>
+        </SUBCATEGORY>
+    </CATEGORY>
+    <CATEGORY>
+        <CATEGORY_NAME>Books</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>roman</SUBCATEGORY_NAME>
+            <NEWS_NAME>Dostoevskiy</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>chmut</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.09.2010</DATE_OF_ISSUE>
+            <NEWS_BODY>new book Dostoevskiy F.M.</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>since</SUBCATEGORY_NAME>
+            <NEWS_NAME>Java</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>chmut</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.09.205</DATE_OF_ISSUE>
+            <NEWS_BODY>new book Java HeadFirst</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>sience</SUBCATEGORY_NAME>
+            <NEWS_NAME>Java for beginners</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>some author</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>20.10.2004</DATE_OF_ISSUE>
+            <NEWS_BODY>New book on java for beginners.</NEWS_BODY>
+        </SUBCATEGORY>
+    </CATEGORY>
+</CATALOG>

@@ -7,11 +7,6 @@ import java.io.IOException;
 
 public class ErrorCommand implements by.chmut.catalog.controller.Command {
 
-    public String[] sexecute(String request) {
-        String[] result = new String[1];
-        result[0] = "Incorrect command or no data in the command! Try again!";
-        return result;
-    }
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

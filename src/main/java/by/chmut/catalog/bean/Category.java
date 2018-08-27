@@ -4,14 +4,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.xml.bind.annotation.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 
 @NoArgsConstructor
 @Data
-
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Category {
 

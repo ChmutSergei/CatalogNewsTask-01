@@ -24,8 +24,11 @@ public class ReadCommand implements Command {
 
         String contextPath = req.getContextPath();
 
-        resp.sendRedirect(contextPath+ "/controller?command=search");
+        resp.sendRedirect(contextPath+ "/controller?command=main");
+
     }
+
+
 
     private void setCatalogInSessionIfDoesNotSet(HttpSession session) {
         if (session.getAttribute("catalog") == null) {

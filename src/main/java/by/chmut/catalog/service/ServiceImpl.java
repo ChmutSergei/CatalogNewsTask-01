@@ -2,25 +2,26 @@ package by.chmut.catalog.service;
 
 import by.chmut.catalog.bean.*;
 import by.chmut.catalog.bean.criteria.Criteria;
-import by.chmut.catalog.dao.CatalogDAO;
+import by.chmut.catalog.dao.DAO;
 import by.chmut.catalog.dao.DAOFactory;
 import by.chmut.catalog.service.validation.Validator;
 
+import java.util.List;
+
 
 public class ServiceImpl implements Service {
-    private static final int COUNT_CHAR_MAX = 85;
+
     private final DAOFactory factory = DAOFactory.getInstance();
 
     @Override
-    public <E> Catalog find(Criteria<E> criteria, Catalog catalog) {
+    public <E> List<News> find(Criteria<E> criteria, List<News> news) {
+
         if (!Validator.criteriaValidator(criteria)) {
-            return catalog;
+            return news;
         }
 
-        CatalogDAO catalogDAO = factory.getCatalogDAO();
+        DAO DAO = factory.getDAO();
 
-        catalog = (Catalog) catalogDAO.find(criteria, catalog);
-
-        return catalog;
+        return DAO.find(criteria, news);
     }
 }

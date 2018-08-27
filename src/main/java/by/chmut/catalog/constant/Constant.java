@@ -1,4 +1,4 @@
-package by.chmut.catalog.controller;
+package by.chmut.catalog.constant;
 
 public class Constant {
 

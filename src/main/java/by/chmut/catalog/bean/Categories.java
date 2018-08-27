@@ -1,10 +1,13 @@
 package by.chmut.catalog.bean;
 
+import lombok.NoArgsConstructor;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
+@NoArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Categories {
 
@@ -33,5 +36,9 @@ public class Categories {
 
     public void setNews(List<News> news) {
         this.news = news;
+    }
+
+    public void add(News freshNews) {
+        news.add(freshNews);
     }
 }

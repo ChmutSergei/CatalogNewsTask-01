@@ -1,5 +1,7 @@
 package by.chmut.catalog.controller;
 
+import by.chmut.catalog.dao.DAOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

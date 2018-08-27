@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.xml.bind.annotation.*;
-import java.util.List;
 import java.util.Objects;
 
 @Data
@@ -12,13 +11,13 @@ import java.util.Objects;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Subcategory extends Category {
 
+    @XmlElement(name = "SUBCATEGORY_NAME")
+    private String subcategoryName;
 
     public Subcategory(String categoryName, String subcategoryName) {
         super(categoryName);
         this.subcategoryName = subcategoryName;
     }
-    @XmlElement(name = "SUBCATEGORY_NAME")
-    private String subcategoryName;
 
     public String getSubcategoryName() {
         return subcategoryName;

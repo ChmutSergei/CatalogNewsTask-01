@@ -14,13 +14,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   ]]>
-    <style>
 
-    </style>
 </head>
 <body>
 
+
+
+
     <div class="container col-xs-12" style="background-color:#e6f7d9;">
+
+        <c:if test="${not empty sessionScope.error}">
+            <div class="alert alert-warning col-xs-6 left-arrow">
+                ${error}
+            </div>
+        </c:if>
+
+        <c:if test="${not empty sessionScope.success}">
+            <div class="alert alert-success col-xs-6 left-arrow">
+                ${success}
+            </div>
+        </c:if>
 
         <c:if test="${not empty sessionScope.result}">
 
@@ -40,20 +53,24 @@
                                 <thead>
                                 <tr>
                                     <th class="col-xs-1">№</th>
-                                    <th class="col-xs-2">Category</th>
+                                    <th class="col-xs-1">Category</th>
                                     <th class="col-xs-1">Subcategory</th>
-                                    <th class="col-xs-2">News name</th>
-                                    <th class="col-xs-2">Provider</th>
+                                    <th class="col-xs-1">News name</th>
+                                    <th class="col-xs-1">Provider</th>
+                                    <th class="col-xs-1">Date</th>
+                                    <th class="col-xs-2">Body</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="catalog" items="${result}" varStatus="status">
+                                <c:forEach var="result" items="${sessionScope.result}" varStatus="status">
                                     <tr>
                                         <td class="col-xs-1">${status.index+1}</td>
-                                        <td class="col-xs-2">${result.category}</td>
-                                        <td class="col-xs-1">${result.subcategory}</td>
-                                        <td class="col-xs-2">${result.name}</td>
-                                        <td class="col-xs-2">${result.provider}</td>
+                                        <td class="col-xs-1">${result.categoryName}</td>
+                                        <td class="col-xs-1">${result.subcategoryName}</td>
+                                        <td class="col-xs-1">${result.nameNews}</td>
+                                        <td class="col-xs-1">${result.provider}</td>
+                                        <td class="col-xs-1">${result.date}</td>
+                                        <td class="col-xs-2">${result.body}</td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
@@ -64,87 +81,71 @@
             </div>
         </c:if>
 
-
-        <!--<c:choose>-->
-            <!--<c:when test="${not empty emptyMsg}">-->
-                <!--<div class="container" style="height: 800px">-->
-                    <!--<div class="alert alert-warning col-xs-6 left-arrow">-->
-                        <!--<strong>message</strong>-->
-                        <!--<a href="${pageContext.request.contextPath}/frontController?pageName=search">search</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</c:when>-->
-            <!--<c:otherwise>-->
-                <div class="container">
-                    <div class="text-left">
-                        <h2>Catalog</h2>
-                        <p>edit</p>
-                    </div>
-                    <div class="row col-xs-10 col-xs-offset-1 ">
-                        <div class="row">
-                            <table class="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th class="col-xs-1">№</th>
-                                    <th class="col-xs-2">type</th>
-                                    <th class="col-xs-1"><span class="glyphicon glyphicon-bed"></span></th>
-                                    <th class="col-xs-2">checkin</th>
-                                    <th class="col-xs-2">checkout</th>
-                                    <th class="col-xs-1">price</th>
-                                    <th class="col-xs-2"></th>
-                                    <th class="col-xs-1"></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <!--<c:forEach var="categories" items="${sessionScope.catalog.categories}" varStatus="status">-->
-                                <c:forEach var="news" items="${sessionScope.news}" varStatus="status">
-                                <!--<c:forEach var="subcategories" items="${category.subcategories}" varStatus="status">-->
-                                <!--<c:forEach var="subcategory" items="${subcategories.subcategory}" varStatus="status">-->
-                                <!--<c:forEach var="news" items="${subcategory.news}" varStatus="status">-->
-                                <!--<c:forEach var="news1" items="${news}" varStatus="status">-->
-                                    <tr>
-                                        <td class="col-xs-1">${status.index+1}</td>
-                                        <td class="col-xs-2">${news.nameNews}</td>
-                                        <td class="col-xs-1">${news.provider}</td>
-                                        <td class="col-xs-2">${news.date}</td>
-                                        <td class="col-xs-2">${news.body}</td>
-                                        <!--<td class="col-xs-1">${room.price}</td>-->
-                                        <!--<td class="col-xs-2"><a href="#" class="btn bg-info">about</a></td>-->
-                                        <!--<td class="col-xs-1"><a id="5"-->
-                                                                <!--href="${pageContext.request.contextPath}/controller?pageName=reservation&amp;delete=room"-->
-                                                                <!--class="delete">delete</a></td>-->
-                                    </tr>
-                                </c:forEach>
-                                <!--</c:forEach>-->
-                                <!--</c:forEach>-->
-                                <!--</c:forEach>-->
-                                <!--</c:forEach>-->
-                                <!--</c:forEach>-->
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th></th>
-                                    <th colspan="3">payment</th>
-                                    <th></th>
-                                    <th>5</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <div class="row col-xs-7 col-xs-offset-3">
-                        <span class="info">agree<a href="#">rule</a>ready</span>
-                        <a class="btn bg-primary"
-                           href="${pageContext.request.contextPath}/controller?pageName=payment">pay</a>
+        <fieldset id="contact" class="container">
+            <h2>Search</h2>
+            <p>Entrering params for search News</p>
+            <form class="form-horizontal" action="${pageContext.request.contextPath}/controller?command=search" method="post">
+                <![CDATA[
+            <legend>
+            ]]>
+                Params
+                <![CDATA[
+            </legend>
+            ]]>
+                <div class="form-group">
+                    <label class="control-label col-xs-3" for="category">Category</label>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="category" placeholder="Enter category name" name="category"  />
                     </div>
                 </div>
-            <!--</c:otherwise>-->
-        <!--</c:choose>-->
+                <div class="form-group">
+                    <label class="control-label col-xs-3" for="subcategory">Subcategory</label>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="subcategory" placeholder="Enter subcategory name"  name="subcategory" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-3" for="newsName">Name of News</label>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="newsName" placeholder="Enter Name of News" name="newsName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-3" for="provider">Provider of News</label>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="provider" placeholder="Enter provider" name="newsProvider" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-3" for="date">Date</label>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="date" placeholder="Enter date" name="newsDate" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-3" for="body">Words in body News</label>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="body" placeholder="Enter information on body" name="newsBody" />
+                    </div>
+                </div>
+
+
+                    <div class="form-group">
+                        <div class="col-xs-offset-3 col-xs-6">
+                            <input type="submit" class="btn btn-primary col-xs-3" value="Search" />
+                            <span class="emptyfield col-xs-3 "></span>
+                            <input type="reset" class="btn btn-default col-xs-3" style="width: 100px;" value="Reset" />
+                        </div>
+                        <div class="col-xs-offset-3 col-xs-6" style="height: 100px">
+                            <div class="col-xs-offset-3 col-xs-9" style="height: 100px"></div>
+                            <a id="add1" href="${pageContext.request.contextPath}/controller?command=add" class="button"
+                            style="font-size: larger;padding-top: 30px" ><strong>Add News</strong></a>
+                        </div>
+                    </div>
+
+
+            </form>
+        </fieldset>
 
     </div>
 </body>

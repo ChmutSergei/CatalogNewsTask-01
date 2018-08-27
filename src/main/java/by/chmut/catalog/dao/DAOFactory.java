@@ -4,13 +4,13 @@ public class DAOFactory {
 
     private static final DAOFactory instance = new DAOFactory();
 
-    private final CatalogDAO catalogDAO = new CatalogDAOImpl();
+    private final DAO DAO = new DAOImpl();
 
     private final JAXBparser parser = new JAXBparserImpl();
 
 
-    public CatalogDAO getCatalogDAO() {
-        return catalogDAO;
+    public DAO getDAO() {
+        return DAO;
     }
 
     public JAXBparser getParser() {

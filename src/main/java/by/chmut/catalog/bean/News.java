@@ -35,6 +35,15 @@ public class News extends Subcategory{
 
     }
 
+    public News(String subcategoryName, String nameNews, String provider, String date, String body) {
+        super("", subcategoryName);
+        this.nameNews = nameNews;
+        this.provider = provider;
+        this.date = date;
+        this.body = body;
+
+    }
+
     public String getNameNews() {
         return nameNews;
     }

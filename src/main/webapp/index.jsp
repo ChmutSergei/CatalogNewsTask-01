@@ -4,7 +4,7 @@
 <head>
     <%--<title></title>--%>
 </head>
-<%--<jsp:forward page="/controller"/>--%>
+<jsp:forward page="/controller?command=read"/>
 <body>
 </form>
 </body>

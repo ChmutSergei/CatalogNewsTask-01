@@ -2,6 +2,7 @@ package by.chmut.catalog.controller.command;
 
 
 import by.chmut.catalog.bean.Catalog;
+import by.chmut.catalog.bean.News;
 import by.chmut.catalog.bean.criteria.Criteria;
 import by.chmut.catalog.bean.criteria.SearchCriteria;
 import by.chmut.catalog.controller.Command;
@@ -13,8 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
-import static by.chmut.catalog.controller.Constant.MAIN;
+import static by.chmut.catalog.constant.Constant.MAIN;
 
 
 public class SearchCommand implements Command {
@@ -27,13 +29,18 @@ public class SearchCommand implements Command {
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+
         makeCriteriaWithReceivedParams(req);
 
         HttpSession session = req.getSession();
 
-        Catalog result = factory.getService().find(categoryCriteria, (Catalog) session.getAttribute("catalog"));
+        Catalog catalog = (Catalog) session.getAttribute("catalog");
+
+        List<News> result = catalog.getAllNews();
 
         result = factory.getService().find(categoryCriteria, result);
+
+        result = factory.getService().find(subcategoryCriteria, result);
 
         result = factory.getService().find(newsCriteria, result);
 
@@ -42,7 +49,10 @@ public class SearchCommand implements Command {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher(MAIN);
 
         requestDispatcher.forward(req, resp);
+
+        removeInformationMessages(session);
     }
+
 
 
     private void makeCriteriaWithReceivedParams(HttpServletRequest req) {
@@ -60,5 +70,11 @@ public class SearchCommand implements Command {
         newsCriteria.add(SearchCriteria.News.NEWS, newsBody);
 
     }
+
+    private void removeInformationMessages(HttpSession session) {
+        session.setAttribute("error","");
+        session.setAttribute("success","");
+    }
+
 
 }

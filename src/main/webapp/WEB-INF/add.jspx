@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+      version="2.0">
+<jsp:directive.page pageEncoding="UTF-8" contentType="text/html; UTF-8"/>
+<!--<script>var contextUrl = '${pageContext.request.contextPath}';</script>-->
+
+<head>
+
+    <![CDATA[
+    <meta charset="utf-8">
+    <meta nameNews="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  ]]>
+
+</head>
+<body>
+
+<div class="container col-xs-12" style="background-color:#e6f7d0;height: 1000px">
+
+
+    <fieldset id="contact" class="container">
+        <h2>Add in Catalog fresh News</h2>
+        <p>Entrering params to add News</p>
+        <form class="form-horizontal" action="${pageContext.request.contextPath}/controller?command=save" method="post">
+            <![CDATA[
+            <legend>
+            ]]>
+            All params are required
+            <![CDATA[
+            </legend>
+            ]]>
+            <div class="form-group">
+                <label class="control-label col-xs-3" for="category">Category</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" id="category" placeholder="Enter category name" name="category" required="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3" for="subcategory">Subcategory</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" id="subcategory" placeholder="Enter subcategory name"  name="subcategory" required="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3" for="newsName">Name of News</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" id="newsName" placeholder="Enter Name of News" name="newsName" required="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3" for="provider">Provider of News</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" id="provider" placeholder="Enter provider" name="newsProvider" required="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3" for="date">Date</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" id="date" placeholder="Enter date" name="newsDate" required="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3" for="body">Information</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" id="body" placeholder="Enter information on body" name="newsBody" required="" />
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-6">
+                    <input type="submit" class="btn btn-primary col-xs-3" value="Submit" />
+                    <span class="emptyfield col-xs-3 "></span>
+                    <input type="reset" class="btn btn-default col-xs-3" style="width: 100px;" value="Reset" />
+                </div>
+            </div>
+
+
+        </form>
+    </fieldset>
+
+</div>
+</body>
+</html>

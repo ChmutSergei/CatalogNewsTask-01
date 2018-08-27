@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CATALOG>
+    <CATEGORY>
+        <CATEGORY_NAME>Music</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>action</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>Michael</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>Michael</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>Michael</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>last</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>SACH</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>SACH</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>SACH</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+    </CATEGORY>
+    <CATEGORY>
+        <CATEGORY_NAME>DEMO</CATEGORY_NAME>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>action</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>Michael</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>Michael</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>Michael</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>last</SUBCATEGORY_NAME>
+            <NEWS>
+                <NEWS_NAME>SACH</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>SACH</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+            <NEWS>
+                <NEWS_NAME>SACH</NEWS_NAME>
+                <PROVIDER_AUTHOR_AUTHORS>Chmt</PROVIDER_AUTHOR_AUTHORS>
+                <DATE_OF_ISSUE>28.12.2008</DATE_OF_ISSUE>
+                <NEWS_BODY>something information</NEWS_BODY>
+            </NEWS>
+        </SUBCATEGORY>
+    </CATEGORY>
+</CATALOG>

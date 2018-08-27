@@ -1,5 +1,11 @@
+<%-- Created by IntelliJ IDEA. --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<head>
+    <%--<title></title>--%>
+</head>
+<%--<jsp:forward page="/controller"/>--%>
 <body>
-<h2>Hello World!</h2>
+</form>
 </body>
 </html>

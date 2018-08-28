@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class ReadCommand implements Command {
 
-    private final DAOFactory daoFactory = DAOFactory.getInstance();
+    private static final DAOFactory daoFactory = DAOFactory.getInstance();
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

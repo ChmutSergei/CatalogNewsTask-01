@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ServiceImpl implements Service {
 
-    private final DAOFactory factory = DAOFactory.getInstance();
+    private static final DAOFactory factory = DAOFactory.getInstance();
 
     @Override
     public <E> List<News> find(Criteria<E> criteria, List<News> news) {

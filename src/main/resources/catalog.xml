@@ -23,6 +23,13 @@
             <DATE_OF_ISSUE>24.06.2011</DATE_OF_ISSUE>
             <NEWS_BODY>new film of Jane Eir</NEWS_BODY>
         </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>drama</SUBCATEGORY_NAME>
+            <NEWS_NAME>Forrest Gump</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>20th century fox</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>20.05.1997</DATE_OF_ISSUE>
+            <NEWS_BODY>Forrest Gump is a 1994 American romantic comedy-drama film based on the 1986 novel of the same name by Winston Groom. </NEWS_BODY>
+        </SUBCATEGORY>
     </CATEGORY>
     <CATEGORY>
         <CATEGORY_NAME>Music</CATEGORY_NAME>
@@ -70,6 +77,13 @@
             <PROVIDER_AUTHOR_AUTHORS>some author</PROVIDER_AUTHOR_AUTHORS>
             <DATE_OF_ISSUE>20.10.2004</DATE_OF_ISSUE>
             <NEWS_BODY>New book on java for beginners.</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>Action</SUBCATEGORY_NAME>
+            <NEWS_NAME>Chernovick</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>RuPress</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>24.06.2004</DATE_OF_ISSUE>
+            <NEWS_BODY>New book of Lukiynenko.</NEWS_BODY>
         </SUBCATEGORY>
     </CATEGORY>
 </CATALOG>

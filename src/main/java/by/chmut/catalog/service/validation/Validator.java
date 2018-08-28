@@ -8,7 +8,7 @@ public class Validator {
 
     public static <E> boolean criteriaValidator(Criteria<E> criteria) {
         for (Map.Entry entry: criteria.getCriteria().entrySet()) {
-            if (entry.getValue() != null) {
+            if (entry.getValue() != "") {
                 return true;
             }
         }

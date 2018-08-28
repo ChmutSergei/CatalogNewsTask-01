@@ -21,6 +21,7 @@ public class DAOImpl implements DAO {
 
         for (Map.Entry<E, Object> entry : thisCriteria.entrySet()) {
             for (News oneNews : news) {
+
                 if (entry.getKey() == CATEGORYNAME) {
                     if (isFieldContainsValue(oneNews.getCategoryName(), (String) entry.getValue())) {
                         resultNews.add(oneNews);
@@ -60,6 +61,9 @@ public class DAOImpl implements DAO {
     }
 
     private boolean isFieldContainsValue(String field, String value) {
+        if (value.isEmpty()) {
+            return false;
+        }
         String valueLowerCase = value.toLowerCase();
         String valueFirstCharUpperCase = firstUpperCase(value);
         String valueUpperCase = value.toUpperCase();

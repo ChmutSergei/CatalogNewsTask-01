@@ -65,14 +65,14 @@
             <div class="form-group">
                 <label class="control-label col-xs-3" for="body">Information</label>
                 <div class="col-xs-6">
-                    <input type="text" class="form-control" id="body" placeholder="Enter information on body" name="newsBody" required="" />
+                    <input type="text" class="form-control" id="body" placeholder="Enter information of News" name="newsBody" required="" />
                 </div>
             </div>
 
 
             <div class="form-group">
                 <div class="col-xs-offset-3 col-xs-6">
-                    <input type="submit" class="btn btn-primary col-xs-3" value="Submit" />
+                    <input type="submit" class="btn btn-primary col-xs-3" value="Save" />
                     <span class="emptyfield col-xs-3 "></span>
                     <input type="reset" class="btn btn-default col-xs-3" style="width: 100px;" value="Reset" />
                 </div>

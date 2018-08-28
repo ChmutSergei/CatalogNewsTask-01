@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class SaveCommand implements Command {
 
     private Catalog catalog;
-    private final DAOFactory daoFactory = DAOFactory.getInstance();
+    private static final DAOFactory daoFactory = DAOFactory.getInstance();
 
     @Override
 

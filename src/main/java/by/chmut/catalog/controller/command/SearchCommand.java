@@ -25,7 +25,7 @@ public class SearchCommand implements Command {
     private Criteria<SearchCriteria.Subcategory> subcategoryCriteria = new Criteria<>(SearchCriteria.Subcategory.class);
     private Criteria<SearchCriteria.News> newsCriteria = new Criteria<>(SearchCriteria.News.class);
 
-    private final ServiceFactory factory = ServiceFactory.getInstance();
+    private static final ServiceFactory factory = ServiceFactory.getInstance();
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

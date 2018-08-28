@@ -23,6 +23,8 @@
 
     <div class="container col-xs-12" style="background-color:#e6f7d9;">
 
+        <!--Show message success or error-->
+
         <c:if test="${not empty sessionScope.error}">
             <div class="alert alert-warning col-xs-6 left-arrow">
                 ${error}
@@ -35,51 +37,12 @@
             </div>
         </c:if>
 
-        <c:if test="${not empty sessionScope.result}">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-5 col-xs-offset-2 text-right" style="padding: 10px;">
-                        <p style="font-size: 15px">Message</p>
-                    </div>
-                    <div class="col-xs-1">
-                        <button class="btn btn-default" data-toggle="collapse" data-target="#demo">view</button>
-                    </div>
-                </div>
-                <div id="demo" class="collapse">
-                    <div class="row col-xs-8 col-xs-offset-2 ">
-                        <div class="row">
-                            <table class="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th class="col-xs-1">№</th>
-                                    <th class="col-xs-1">Category</th>
-                                    <th class="col-xs-1">Subcategory</th>
-                                    <th class="col-xs-1">News name</th>
-                                    <th class="col-xs-1">Provider</th>
-                                    <th class="col-xs-1">Date</th>
-                                    <th class="col-xs-2">Body</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <c:forEach var="result" items="${sessionScope.result}" varStatus="status">
-                                    <tr>
-                                        <td class="col-xs-1">${status.index+1}</td>
-                                        <td class="col-xs-1">${result.categoryName}</td>
-                                        <td class="col-xs-1">${result.subcategoryName}</td>
-                                        <td class="col-xs-1">${result.nameNews}</td>
-                                        <td class="col-xs-1">${result.provider}</td>
-                                        <td class="col-xs-1">${result.date}</td>
-                                        <td class="col-xs-2">${result.body}</td>
-                                    </tr>
-                                </c:forEach>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </c:if>
+        <!--Ref for Add News-->
+        <div class="col-xs-offset-3 col-xs-6" >
+            <a id="add1" href="${pageContext.request.contextPath}/controller?command=add" class="button"
+               style="font-size: larger;padding-top: 30px" ><strong>Add News</strong></a>
+        </div>
+        <!--Enter params for search-->
 
         <fieldset id="contact" class="container">
             <h2>Search</h2>
@@ -119,16 +82,15 @@
                 <div class="form-group">
                     <label class="control-label col-xs-3" for="date">Date</label>
                     <div class="col-xs-6">
-                        <input type="text" class="form-control" id="date" placeholder="Enter date" name="newsDate" />
+                        <input type="text" class="form-control" id="date" placeholder="Enter date of News" name="newsDate" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-xs-3" for="body">Words in body News</label>
                     <div class="col-xs-6">
-                        <input type="text" class="form-control" id="body" placeholder="Enter information on body" name="newsBody" />
+                        <input type="text" class="form-control" id="body" placeholder="Enter some information" name="newsBody" />
                     </div>
                 </div>
-
 
                     <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-6">
@@ -136,16 +98,58 @@
                             <span class="emptyfield col-xs-3 "></span>
                             <input type="reset" class="btn btn-default col-xs-3" style="width: 100px;" value="Reset" />
                         </div>
-                        <div class="col-xs-offset-3 col-xs-6" style="height: 100px">
-                            <div class="col-xs-offset-3 col-xs-9" style="height: 100px"></div>
-                            <a id="add1" href="${pageContext.request.contextPath}/controller?command=add" class="button"
-                            style="font-size: larger;padding-top: 30px" ><strong>Add News</strong></a>
-                        </div>
                     </div>
-
-
             </form>
         </fieldset>
+
+        <!--Show results-->
+
+        <c:if test="${not empty sessionScope.result}">
+
+            <div class="container">
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-5 col-xs-offset-1 text-right" style="padding: 10px;">-->
+                        <!--<p style="font-size: 15px">Results</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-1">-->
+                        <!--<button class="btn btn-default" data-toggle="collapse" data-target="#demo">view</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="demo" class="collapse">-->
+                    <div class="row col-xs-8 col-xs-offset-2 ">
+                        <div class="row">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th class="col-xs-1">№</th>
+                                    <th class="col-xs-1">Category</th>
+                                    <th class="col-xs-1">Subcategory</th>
+                                    <th class="col-xs-1">News name</th>
+                                    <th class="col-xs-1">Provider</th>
+                                    <th class="col-xs-1">Date</th>
+                                    <th class="col-xs-2">Body</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <c:forEach var="result" items="${sessionScope.result}" varStatus="status">
+                                    <tr>
+                                        <td class="col-xs-1">${status.index+1}</td>
+                                        <td class="col-xs-1">${result.categoryName}</td>
+                                        <td class="col-xs-1">${result.subcategoryName}</td>
+                                        <td class="col-xs-1">${result.nameNews}</td>
+                                        <td class="col-xs-1">${result.provider}</td>
+                                        <td class="col-xs-1">${result.date}</td>
+                                        <td class="col-xs-2">${result.body}</td>
+                                    </tr>
+                                </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <!--</div>-->
+            </div>
+        </c:if>
+
 
     </div>
 </body>

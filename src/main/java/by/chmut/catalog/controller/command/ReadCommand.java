@@ -33,7 +33,7 @@ public class ReadCommand implements Command {
     private void setCatalogInSessionIfDoesNotSet(HttpSession session) {
         if (session.getAttribute("catalog") == null) {
             try {
-                Catalog catalog = daoFactory.getParser().load();
+                Catalog catalog = daoFactory.getCatalogDAO().load();
                 session.setAttribute("catalog", catalog);
             } catch (DAOException e) {
                 session.setAttribute("error", "Error with Load catalog");

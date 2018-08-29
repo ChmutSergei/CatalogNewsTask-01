@@ -1,4 +1,4 @@
-package by.chmut.catalog.filters;
+package by.chmut.catalog.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

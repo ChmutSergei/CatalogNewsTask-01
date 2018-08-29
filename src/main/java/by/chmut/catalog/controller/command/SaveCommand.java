@@ -62,7 +62,7 @@ public class SaveCommand implements Command {
 
     private void saveCatalog() {
         try {
-            daoFactory.getParser().save(catalog);
+            daoFactory.getCatalogDAO().save(catalog);
         } catch (DAOException e) {
             e.printStackTrace();
         }

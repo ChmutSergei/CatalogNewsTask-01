@@ -4,8 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.xml.bind.annotation.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Data
 @NoArgsConstructor
@@ -29,12 +28,10 @@ public class Catalog {
         this.categories = categories;
     }
 
-    public List<News> getAllNews() {
-        List<News> news = new ArrayList<>();
+    public Set<News> getAllNews() {
+        Set<News> news = new HashSet<>();
         for (Categories categories: categories) {
-            for (News oneNews:categories.getNews()) {
-                news.add(oneNews);
-            }
+            news.addAll(categories.getNews());
         }
         return news;
     }

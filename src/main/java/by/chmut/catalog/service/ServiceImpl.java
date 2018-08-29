@@ -2,11 +2,11 @@ package by.chmut.catalog.service;
 
 import by.chmut.catalog.bean.*;
 import by.chmut.catalog.bean.criteria.Criteria;
-import by.chmut.catalog.dao.DAO;
 import by.chmut.catalog.dao.DAOFactory;
 import by.chmut.catalog.service.validation.Validator;
 
 import java.util.List;
+import java.util.Set;
 
 
 public class ServiceImpl implements Service {
@@ -14,14 +14,19 @@ public class ServiceImpl implements Service {
     private static final DAOFactory factory = DAOFactory.getInstance();
 
     @Override
-    public <E> List<News> find(Criteria<E> criteria, List<News> news) {
+    public <E> Set<News> find(List<Criteria> allCriteriaToSearch) {
 
-        if (!Validator.criteriaValidator(criteria)) {
-            return news;
+        Set<News> result = factory.getCatalogDAO().getAllNews();
+
+        for (Criteria criteria: allCriteriaToSearch) {
+
+            if (Validator.criteriaIsNotEmpty(criteria)) {
+
+                result = factory.getCatalogDAO().find(criteria, result);
+
+            }
         }
 
-        DAO DAO = factory.getDAO();
-
-        return DAO.find(criteria, news);
+        return result;
     }
 }

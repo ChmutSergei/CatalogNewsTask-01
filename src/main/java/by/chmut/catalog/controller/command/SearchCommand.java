@@ -1,7 +1,5 @@
 package by.chmut.catalog.controller.command;
 
-
-import by.chmut.catalog.bean.Catalog;
 import by.chmut.catalog.bean.News;
 import by.chmut.catalog.bean.criteria.Criteria;
 import by.chmut.catalog.bean.criteria.SearchCriteria;
@@ -14,9 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
-import static by.chmut.catalog.constant.Constant.MAIN;
+import static by.chmut.catalog.bean.criteria.SearchCriteria.News.*;
+import static by.chmut.catalog.bean.criteria.SearchCriteria.Category.*;
+import static by.chmut.catalog.bean.criteria.SearchCriteria.Subcategory.*;
+import static by.chmut.catalog.controller.command.constant.Constant.MAIN;
 
 
 public class SearchCommand implements Command {
@@ -30,19 +33,11 @@ public class SearchCommand implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        makeCriteriaWithReceivedParams(req);
-
         HttpSession session = req.getSession();
 
-        Catalog catalog = (Catalog) session.getAttribute("catalog");
+        List<Criteria> allCriteriaToSearchNews = makeCriteriaWithReceivedParams(req);
 
-        List<News> result = catalog.getAllNews();
-
-        result = factory.getService().find(categoryCriteria, result);
-
-        result = factory.getService().find(subcategoryCriteria, result);
-
-        result = factory.getService().find(newsCriteria, result);
+        Set<News> result = factory.getService().find(allCriteriaToSearchNews);
 
         session.setAttribute("result", result);
 
@@ -55,20 +50,18 @@ public class SearchCommand implements Command {
 
 
 
-    private void makeCriteriaWithReceivedParams(HttpServletRequest req) {
-        String categoryName = req.getParameter("category");
-        String subcategoryName = req.getParameter("subcategory");
-        String newsName = req.getParameter("newsName");
-        String newsProvider = req.getParameter("newsProvider");
-        String newsDate = req.getParameter("newsDate");
-        String newsBody = req.getParameter("newsBody");
-        categoryCriteria.add(SearchCriteria.Category.CATEGORYNAME, categoryName);
-        subcategoryCriteria.add(SearchCriteria.Subcategory.SUBCATEGORYNAME, subcategoryName);
-        newsCriteria.add(SearchCriteria.News.NEWSNAME, newsName);
-        newsCriteria.add(SearchCriteria.News.PROVIDER, newsProvider);
-        newsCriteria.add(SearchCriteria.News.DATE, newsDate);
-        newsCriteria.add(SearchCriteria.News.NEWS, newsBody);
-
+    private List<Criteria> makeCriteriaWithReceivedParams(HttpServletRequest req) {
+        categoryCriteria.add(CATEGORYNAME, req.getParameter("category"));
+        subcategoryCriteria.add(SUBCATEGORYNAME, req.getParameter("subcategory"));
+        newsCriteria.add(NEWSNAME, req.getParameter("newsName"));
+        newsCriteria.add(PROVIDER, req.getParameter("newsProvider"));
+        newsCriteria.add(DATE, req.getParameter("newsDate"));
+        newsCriteria.add(NEWS, req.getParameter("newsBody"));
+        List<Criteria> listOfCriteriaToSearch = new ArrayList<>();
+        listOfCriteriaToSearch.add(categoryCriteria);
+        listOfCriteriaToSearch.add(subcategoryCriteria);
+        listOfCriteriaToSearch.add(newsCriteria);
+        return listOfCriteriaToSearch;
     }
 
     private void removeInformationMessages(HttpSession session) {

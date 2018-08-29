@@ -14,6 +14,7 @@ import java.util.Objects;
 
 public class News extends Subcategory{
 
+
     @XmlElement(name = "NEWS_NAME")
     private String nameNews;
 

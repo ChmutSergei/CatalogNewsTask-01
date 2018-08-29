@@ -85,5 +85,12 @@
             <DATE_OF_ISSUE>24.06.2004</DATE_OF_ISSUE>
             <NEWS_BODY>New book of Lukiynenko.</NEWS_BODY>
         </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>sience</SUBCATEGORY_NAME>
+            <NEWS_NAME>Science(ish) : the peculiar science behind the movies / Rick Edwards, Dr Michael Brooks.</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>Wellington City Libraries</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>28.03.2018</DATE_OF_ISSUE>
+            <NEWS_BODY>“Covering movies from 28 Days later to Ex Machina, this is a … ride through astrophysics, neuroscience, psychology, botany, artificial intelligence, evolution and plenty more subjects you’ve always wanted to grasp.” (Book jacket)</NEWS_BODY>
+        </SUBCATEGORY>
     </CATEGORY>
 </CATALOG>

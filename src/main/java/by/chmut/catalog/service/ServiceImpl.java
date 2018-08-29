@@ -5,6 +5,7 @@ import by.chmut.catalog.bean.criteria.Criteria;
 import by.chmut.catalog.dao.DAOFactory;
 import by.chmut.catalog.service.validation.Validator;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -16,13 +17,13 @@ public class ServiceImpl implements Service {
     @Override
     public <E> Set<News> find(List<Criteria> allCriteriaToSearch) {
 
-        Set<News> result = factory.getCatalogDAO().getAllNews();
+        Set<News> result = new HashSet<>();
 
         for (Criteria criteria: allCriteriaToSearch) {
 
-            if (Validator.criteriaIsNotEmpty(criteria)) {
+            if (Validator.isNotEmpty(criteria)) {
 
-                result = factory.getCatalogDAO().find(criteria, result);
+                result.addAll(factory.getCatalogDAO().find(criteria));
 
             }
         }

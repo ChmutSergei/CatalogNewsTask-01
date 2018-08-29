@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Validator {
 
-    public static <E> boolean criteriaIsNotEmpty(Criteria<E> criteria) {
+    public static <E> boolean isNotEmpty(Criteria<E> criteria) {
 
         for (Map.Entry entry: criteria.getCriteria().entrySet()) {
 

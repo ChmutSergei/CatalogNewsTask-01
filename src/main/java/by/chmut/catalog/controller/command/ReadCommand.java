@@ -16,7 +16,7 @@ public class ReadCommand implements Command {
     private static final DAOFactory daoFactory = DAOFactory.getInstance();
 
     @Override
-    public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         HttpSession session = req.getSession();
 

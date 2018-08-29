@@ -6,14 +6,19 @@ import lombok.NoArgsConstructor;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.Objects;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Data
 @NoArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
 
-public class News extends Subcategory{
+public class News {
 
+    @XmlTransient
+    private String categoryName;
+
+    @XmlElement(name = "SUBCATEGORY_NAME")
+    private String subcategoryName;
 
     @XmlElement(name = "NEWS_NAME")
     private String nameNews;
@@ -28,7 +33,8 @@ public class News extends Subcategory{
     private String body;
 
     public News(String categoryName, String subcategoryName, String nameNews, String provider, String date, String body) {
-        super(categoryName, subcategoryName);
+        this.categoryName = categoryName;
+        this.subcategoryName = subcategoryName;
         this.nameNews = nameNews;
         this.provider = provider;
         this.date = date;
@@ -37,7 +43,7 @@ public class News extends Subcategory{
     }
 
     public News(String subcategoryName, String nameNews, String provider, String date, String body) {
-        super("", subcategoryName);
+        this.subcategoryName = subcategoryName;
         this.nameNews = nameNews;
         this.provider = provider;
         this.date = date;
@@ -45,60 +51,78 @@ public class News extends Subcategory{
 
     }
 
-    public String getNameNews() {
-        return nameNews;
-    }
-
-    public void setNameNews(String nameNews) {
-        this.nameNews = nameNews;
-    }
-
-    public String getProvider() {
-        return provider;
-    }
-
-    public void setProvider(String provider) {
-        this.provider = provider;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        News news = (News) o;
-        return Objects.equals(nameNews, news.nameNews) &&
-                Objects.equals(provider, news.provider) &&
-                Objects.equals(date, news.date) &&
-                Objects.equals(body, news.body);
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null ) {
+            return false;
+        }
+        if (this.getClass() != object.getClass()){
+            return false;
+        }
+        News news = (News) object;
+
+        if (this.categoryName == null) {
+            if (news.categoryName != null) {}
+            return false;
+        } else if (!this.categoryName.equals(news.categoryName)) {
+            return false;
+        }
+        if (this.subcategoryName == null) {
+            if (news.subcategoryName != null) {}
+            return false;
+        } else if (!this.subcategoryName.equals(news.subcategoryName)) {
+            return false;
+        }
+        if (this.nameNews == null) {
+            if (news.nameNews != null) {}
+            return false;
+        } else if (!this.nameNews.equals(news.nameNews)) {
+            return false;
+        }
+        if (this.provider == null) {
+            if (news.provider != null) {}
+            return false;
+        } else if (!this.provider.equals(news.provider)) {
+            return false;
+        }
+        if (this.date == null) {
+            if (news.date != null) {}
+            return false;
+        } else if (!this.date.equals(news.date)) {
+            return false;
+        }
+        if (this.body == null) {
+            if (news.body != null) {}
+            return false;
+        } else if (!this.body.equals(news.body)) {
+            return false;
+        }
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(super.hashCode(), nameNews, provider, date, body);
+        int result = 1;
+        result = result*37 + (categoryName == null ? 0 : categoryName.hashCode())*result;
+        result = result*37 + (subcategoryName == null ? 0 : subcategoryName.hashCode())*result;
+        result = result*37 + (nameNews == null ? 0 : nameNews.hashCode())*result;
+        result = result*37 + (provider == null ? 0 : provider.hashCode())*result;
+        result = result*37 + (date == null ? 0 : date.hashCode())*result;
+        result = result*37 + (body == null ? 0 : body.hashCode())*result;
+        return result;
     }
 
     @Override
     public String toString() {
         return "News{" +
-                "name='" + nameNews + '\'' +
+                "categoryName='" + categoryName + '\'' +
+                ", subcategoryName='" + subcategoryName + '\'' +
+                ", nameNews='" + nameNews + '\'' +
                 ", provider='" + provider + '\'' +
                 ", date='" + date + '\'' +
                 ", body='" + body + '\'' +

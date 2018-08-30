@@ -37,7 +37,7 @@ Implemented the functionality of adding news and searching news in the catalog
  
  # Example
  ![scrsh_catalog](https://user-images.githubusercontent.com/42671888/44842894-b0003e80-ac4f-11e8-9a86-136a7d06ec77.JPG)
- 
+ ![scrsh_catalog2](https://user-images.githubusercontent.com/42671888/44842979-e63dbe00-ac4f-11e8-86a6-3df20c8c6917.JPG)
  
  
  # Usage

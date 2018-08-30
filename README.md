@@ -36,10 +36,11 @@ The original data is stored in the file "catalog.xml"  XML-file structure:
 Implemented the functionality of adding news and searching news in the catalog
  
  # Example
+ ![scrsh_catalog](https://user-images.githubusercontent.com/42671888/44842894-b0003e80-ac4f-11e8-9a86-136a7d06ec77.JPG)
  
  
  
- #Usage
+ # Usage
  
  You must save the file **catalog.xm**l from directory _CatalogNewsTask-01/src/main/resources/_
 

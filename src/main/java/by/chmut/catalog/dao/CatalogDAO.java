@@ -13,6 +13,8 @@ public interface CatalogDAO {
 
     Catalog load() throws DAOException;
 
-    void save (Catalog catalog) throws DAOException;
+    void save () throws DAOException;
+
+    void add(News news);
 
 }

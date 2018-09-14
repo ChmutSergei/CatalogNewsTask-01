@@ -30,6 +30,20 @@
             <DATE_OF_ISSUE>20.05.1997</DATE_OF_ISSUE>
             <NEWS_BODY>Forrest Gump is a 1994 American romantic comedy-drama film based on the 1986 novel of the same name by Winston Groom. </NEWS_BODY>
         </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>Action</SUBCATEGORY_NAME>
+            <NEWS_NAME>The Predator</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>20th century Fox</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>10.09.2018</DATE_OF_ISSUE>
+            <NEWS_BODY>When a young boy accidentally triggers the universe's most lethal hunters' return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race.</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>Horror</SUBCATEGORY_NAME>
+            <NEWS_NAME>Gogol'</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>Mysteria</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>10.05.2017</DATE_OF_ISSUE>
+            <NEWS_BODY>The year 1829. Nikolay Gogol, a young Third Section clerk, is desperate: his own books seem shallow and mediocre, so he keeps buying entire print runs just to burn them all. He is suffering...</NEWS_BODY>
+        </SUBCATEGORY>
     </CATEGORY>
     <CATEGORY>
         <CATEGORY_NAME>Music</CATEGORY_NAME>
@@ -91,6 +105,13 @@
             <PROVIDER_AUTHOR_AUTHORS>Wellington City Libraries</PROVIDER_AUTHOR_AUTHORS>
             <DATE_OF_ISSUE>28.03.2018</DATE_OF_ISSUE>
             <NEWS_BODY>“Covering movies from 28 Days later to Ex Machina, this is a … ride through astrophysics, neuroscience, psychology, botany, artificial intelligence, evolution and plenty more subjects you’ve always wanted to grasp.” (Book jacket)</NEWS_BODY>
+        </SUBCATEGORY>
+        <SUBCATEGORY>
+            <SUBCATEGORY_NAME>Novel</SUBCATEGORY_NAME>
+            <NEWS_NAME>Transcription Hardback by Kate Atkinson</NEWS_NAME>
+            <PROVIDER_AUTHOR_AUTHORS>Transworld Publishers Ltd</PROVIDER_AUTHOR_AUTHORS>
+            <DATE_OF_ISSUE>06.09.2018</DATE_OF_ISSUE>
+            <NEWS_BODY>THE MAGNIFICENT NEW NOVEL BY BESTSELLING AWARD-WINNING KATE ATKINSON`Think of it as an adventure, Perry had said right at the beginning of all this.And it had seemed like one.</NEWS_BODY>
         </SUBCATEGORY>
     </CATEGORY>
 </CATALOG>

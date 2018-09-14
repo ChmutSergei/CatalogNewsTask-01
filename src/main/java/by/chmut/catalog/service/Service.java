@@ -1,5 +1,6 @@
 package by.chmut.catalog.service;
 
+import by.chmut.catalog.bean.Catalog;
 import by.chmut.catalog.bean.News;
 import by.chmut.catalog.bean.criteria.Criteria;
 
@@ -11,4 +12,9 @@ public interface Service {
 
     <E> Set<News> find(List<Criteria> allCriteriaToSearch);
 
+    void addNews(News news);
+
+    Catalog load();
+
+    void save();
 }

@@ -1,6 +1,7 @@
 package by.chmut.catalog.dao;
 
 import by.chmut.catalog.bean.Catalog;
+import by.chmut.catalog.bean.Categories;
 import by.chmut.catalog.bean.News;
 import by.chmut.catalog.bean.criteria.Criteria;
 
@@ -15,6 +16,10 @@ public class CatalogDAOImpl implements CatalogDAO {
 
     public Catalog getCatalog() {
         return catalog;
+    }
+
+    public void setCatalog(Catalog catalog) {
+        this.catalog = catalog;
     }
 
     @Override
@@ -109,12 +114,36 @@ public class CatalogDAOImpl implements CatalogDAO {
     }
 
     @Override
-    public void save(Catalog catalog) throws DAOException {
+    public void save() throws DAOException {
 
         JAXBparser jaxbParser = new JAXBparser();
 
         jaxbParser.save(catalog);
 
+    }
+
+
+
+
+
+    @Override
+    public void add(News news) {
+        for (Categories category: catalog.getCategories()) {
+
+            if (category.getCategoryName().equals(news.getCategoryName())) {
+
+                category.add(news);
+
+                return;
+            }
+        }
+        Categories newCategory = new Categories();
+
+        newCategory.setCategoryName(news.getCategoryName());
+
+        newCategory.add(news);
+
+        catalog.getCategories().add(newCategory);
     }
 
 

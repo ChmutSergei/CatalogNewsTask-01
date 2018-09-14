@@ -24,7 +24,7 @@
     <fieldset id="contact" class="container">
         <h2>Add in Catalog fresh News</h2>
         <p>Entrering params to add News</p>
-        <form class="form-horizontal" action="${pageContext.request.contextPath}/controller?command=save" method="post">
+        <form class="form-horizontal" action="${pageContext.request.contextPath}/save" method="post">
             <![CDATA[
             <legend>
             ]]>

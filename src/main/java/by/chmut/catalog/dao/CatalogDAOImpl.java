@@ -23,7 +23,7 @@ public class CatalogDAOImpl implements CatalogDAO {
     }
 
     @Override
-    public <E> Set<News> find(Criteria<E> criteria) {
+    public <E> Set<News> find(Criteria<E> criteria) throws DAOException {
 
         Set<News> resultSearch = new HashSet<>();
 
@@ -38,7 +38,7 @@ public class CatalogDAOImpl implements CatalogDAO {
         return resultSearch;
     }
 
-    private <E> Set<News> findNewsOnParameterCriteria(E nameParameterForSearch, Object valueOfParameter) {
+    private <E> Set<News> findNewsOnParameterCriteria(E nameParameterForSearch, Object valueOfParameter) throws DAOException {
 
         Set<News> result = new HashSet<>();
 
@@ -54,9 +54,9 @@ public class CatalogDAOImpl implements CatalogDAO {
                 fieldValue = (String) field.get(news); // And take value from current Object ! news !
 
             } catch (IllegalAccessException e) {
-                e.printStackTrace();
+                throw new DAOException("Error with get access to search News", e);
             } catch (NoSuchFieldException e) {
-                e.printStackTrace();
+                throw new DAOException("Error with search News - no such field", e);
             }
 
             if (isFieldContainsValue(fieldValue, (String) valueOfParameter)) {
@@ -128,6 +128,7 @@ public class CatalogDAOImpl implements CatalogDAO {
 
     @Override
     public void add(News news) {
+
         for (Categories category: catalog.getCategories()) {
 
             if (category.getCategoryName().equals(news.getCategoryName())) {

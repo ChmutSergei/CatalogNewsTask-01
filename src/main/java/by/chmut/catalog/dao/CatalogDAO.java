@@ -9,7 +9,7 @@ import java.util.Set;
 
 public interface CatalogDAO {
 
-    <E> Set<News> find(Criteria<E> criteria);
+    <E> Set<News> find(Criteria<E> criteria) throws DAOException;
 
     Catalog load() throws DAOException;
 

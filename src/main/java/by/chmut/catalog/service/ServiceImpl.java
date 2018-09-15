@@ -23,7 +23,7 @@ public class ServiceImpl implements Service {
     }
 
     @Override
-    public <E> Set<News> find(List<Criteria> allCriteriaToSearch) {
+    public <E> Set<News> find(List<Criteria> allCriteriaToSearch) throws ServiceException {
 
         Set<News> result = new HashSet<>();
 
@@ -31,7 +31,11 @@ public class ServiceImpl implements Service {
 
             if (Validator.isNotEmpty(criteria)) {
 
-                result.addAll(catalogDAO.find(criteria));
+                try {
+                    result.addAll(catalogDAO.find(criteria));
+                } catch (DAOException e) {
+                    throw new ServiceException(e);
+                }
 
             }
         }
@@ -47,22 +51,22 @@ public class ServiceImpl implements Service {
     }
 
     @Override
-    public Catalog load() {
+    public Catalog load() throws ServiceException {
         Catalog catalog = null;
         try {
             catalog = catalogDAO.load();
         } catch (DAOException e) {
-            e.printStackTrace();
+            throw new ServiceException(e);
         }
         return catalog;
     }
 
     @Override
-    public void save() {
+    public void save() throws ServiceException {
         try {
             catalogDAO.save();
         } catch (DAOException e) {
-            e.printStackTrace();
+            throw new ServiceException(e);
         }
 
 
